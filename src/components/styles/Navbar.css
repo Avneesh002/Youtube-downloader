@@ -1,0 +1,24 @@
+.navbar_body:hover {
+  padding: 10px;
+}
+
+.navbar_body {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid rgb(246, 246, 246);
+  position: sticky;
+  top: 0px;
+  transition: 2s;
+  z-index: 10;
+  background-color: rgb(49, 113, 153);
+  animation: changeBg 15s infinite;
+}
+
+.neonText {
+  color: #fff;
+  text-shadow: 0 0 7px #1227c8, 0 0 10px #fff, 0 0 21px #fff,
+    0 0 42px rgb(18, 149, 225), 0 0 182px rgb(13, 0, 255),
+    0 0 92px rgb(10, 31, 169), 0 0 200px rgb(0, 183, 255),
+    0 0 191px rgb(34, 65, 190);
+  font-weight: 500;
+}
