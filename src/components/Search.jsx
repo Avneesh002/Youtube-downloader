@@ -47,13 +47,13 @@ const Search = ({
       .then((response) => response.json())
       .then((response) => {
         localStorage.setItem("val", JSON.stringify(response));
+        setData(response);
+        setVideos(response.link);
       });
 
     setLoader(false);
   };
   // console.log(vals);
-  setData(vals);
-  setVideos(vals.link);
   return (
     <>
       <Stack pb={"50px"}>
