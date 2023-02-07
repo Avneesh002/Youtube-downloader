@@ -14,6 +14,40 @@ import { DownloadVideo } from "./Video";
 import { useState } from "react";
 import { nanoid } from "nanoid";
 import { DownloadImage } from "./Images";
+import { VideoTutorial } from "./VideoTutorial";
+import { AudioTutorial } from "./AudioTutorial";
+import Contact from "./Contact";
+
+function SearchedData({ data, handleVideo, handleAudio }) {
+  return (
+    <Stack
+      key={nanoid()}
+      p={"10px"}
+      borderRadius="8px"
+      border={"1px solid"}
+      w={useBreakpointValue({ lg: "60%" })}
+      m={"auto"}
+      // h={useBreakpointValue({ lg: "300px" })}
+    >
+      <Stack>
+        <Image alt="image not loaded" src={data.thumb} />
+        <Text fontWeight={"500"}>📛{data.title}</Text>
+
+        <Text fontWeight={"500"}>⌛{data.length}</Text>
+        <Text fontWeight={"500"}>👩🏻‍🎤{data.author}</Text>
+      </Stack>
+      <Flex justify={"space-evenly"}>
+        <Button onClick={handleVideo} colorScheme={"whatsapp"}>
+          For Video 📹
+        </Button>
+        <Button onClick={handleAudio} colorScheme={"whatsapp"}>
+          For Audio 👂🏻
+        </Button>
+      </Flex>
+    </Stack>
+  );
+}
+
 export function Homepage({
   state,
   setState,
@@ -31,12 +65,12 @@ export function Homepage({
   const handleVideo = () => {
     setShowVid(true);
     setShowAud(false);
-    console.log("Working vdo");
+    // console.log("Working vdo");
   };
   const handleAudio = () => {
     setShowAud(true);
     setShowVid(false);
-    console.log("Working audio");
+    // console.log("Working audio");
   };
 
   return (
@@ -61,30 +95,14 @@ export function Homepage({
         </Stack>
         {state ? (
           <Stack className="searched_data">
-            {(loader && data !== []) || data == null || data == undefined ? (
+            {(loader && data == []) || data == null || data == undefined ? (
               <Loader />
             ) : (
-              <Stack
-                key={nanoid()}
-                p={"10px"}
-                borderRadius="8px"
-                border={"1px solid"}
-                w={"99%"}
-              >
-                <Image alt="image not loaded" src={data.thumb} />
-                <Text fontWeight={"500"}>📛{data.title}</Text>
-
-                <Text fontWeight={"500"}>⌛{data.length}</Text>
-                <Text fontWeight={"500"}>👩🏻‍🎤{data.author}</Text>
-                <Flex justify={"space-evenly"}>
-                  <Button onClick={handleVideo} colorScheme={"whatsapp"}>
-                    For Video 📹
-                  </Button>
-                  <Button onClick={handleAudio} colorScheme={"whatsapp"}>
-                    For Audio 👂🏻
-                  </Button>
-                </Flex>
-              </Stack>
+              <SearchedData
+                handleAudio={handleAudio}
+                handleVideo={handleVideo}
+                data={data}
+              />
             )}
           </Stack>
         ) : (
@@ -133,6 +151,7 @@ export function Homepage({
           ""
         )}
         <SimpleGrid
+          pb={"50px"}
           spacing={"20px"}
           columns={{ base: 1, md: 2, lg: 3 }}
           align="center"
@@ -152,10 +171,10 @@ export function Homepage({
               Supported Platforms:
             </Text>
             <Flex pt={"10px"} gap="20px">
-              {/* <Image
+              <Image
                 w={"40px"}
                 src="https://ssyoutube.com/img/platforms/windows.svg"
-              /> */}
+              />
               <Image
                 w={"40px"}
                 src="https://ssyoutube.com/img/platforms/apple.svg"
@@ -164,10 +183,10 @@ export function Homepage({
                 w={"40px"}
                 src="https://ssyoutube.com/img/platforms/android.svg"
               />
-              {/* <Image
+              <Image
                 w={"40px"}
                 src="https://ssyoutube.com/img/platforms/linux.svg"
-              /> */}
+              />
             </Flex>
             <Text pt={"30px"}>
               With our YouTube video downloader, you can select videos and
@@ -181,6 +200,19 @@ export function Homepage({
             </Text>
           </Stack>
         </Stack>
+        <Text
+          opacity={"80%"}
+          p={"30px 5px 5px 5px"}
+          fontSize={"35px"}
+          fontWeight={"600"}
+          align={"center"}
+        >
+          Tutorials
+        </Text>
+        <VideoTutorial />
+        <AudioTutorial />
+
+        <Contact />
       </Stack>
     </>
   );

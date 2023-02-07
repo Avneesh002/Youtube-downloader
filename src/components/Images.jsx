@@ -7,16 +7,6 @@ function sendArray(videos) {
   let videoArr = [];
   arr.push(Object.values(videos));
 
-  //   for (let i = 0; i < arr.length; i++) {
-  //     for (let j = i; j < arr[0].length; j++) {
-  //       if (arr[i][j][4].includes("v")) {
-  //         const obj = Object.assign({}, arr[i][j]);
-  //         videoArr.push(obj);
-  //         console.log(videoArr);
-  //         return videoArr;
-  //       }
-  //     }
-  //   }
   for (let i = 0; i < arr.length; i++) {
     for (let j = i; j < arr[0].length; j++) {
       if (arr[i][j][4].includes("audio")) {
@@ -28,11 +18,6 @@ function sendArray(videos) {
   return videoArr;
 }
 
-// function quality(len, ){
-//     if(len/3){
-//         let val = Math.
-//     }
-// }
 export const DownloadImage = ({ videos, data }) => {
   if (videos == null || videos == undefined) return "";
   return (
@@ -55,6 +40,17 @@ export const DownloadImage = ({ videos, data }) => {
                 <Text fontWeight={"500"} color="green">
                   {el[1] ? el[1] : "currently no data"}
                 </Text>
+              </Stack>
+              <Stack
+                opacity={"50%"}
+                align={"center"}
+                p={"8px"}
+                border={"1px solid"}
+                fontWeight={"500"}
+                direction="row"
+              >
+                <Text>Quality:</Text>
+                <Text>{el[4]}</Text>
               </Stack>
               <a href={el[0]} target="_blank">
                 <Button

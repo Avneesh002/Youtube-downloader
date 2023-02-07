@@ -1,4 +1,10 @@
-import { Button, Flex, Input, Stack } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Input,
+  Stack,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { SearchIcon } from "@chakra-ui/icons";
 import getYouTubeID from "get-youtube-id";
@@ -56,7 +62,7 @@ const Search = ({
   // console.log(vals);
   return (
     <>
-      <Stack pb={"50px"}>
+      <Stack m={"auto"} w={useBreakpointValue({ lg: "80%" })} pb={"50px"}>
         <Flex>
           <Input
             onChange={(e) => handleChange(e)}
@@ -66,11 +72,12 @@ const Search = ({
             type={"url"}
           />
           <Button
+            w={useBreakpointValue({ lg: "100px" })}
             variant={"solid"}
             onClick={() => handleBtn(options, id)}
             bg={"rgb(49, 113, 153)"}
           >
-            <SearchIcon color={"black"} fontWeight="500" />
+            <SearchIcon color={"white"} fontWeight="500" />
           </Button>
         </Flex>
       </Stack>
