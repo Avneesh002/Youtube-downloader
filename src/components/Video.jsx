@@ -1,4 +1,4 @@
-import { Badge, Button, Flex, Stack, Text } from "@chakra-ui/react";
+import { Badge, Button, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { nanoid } from "nanoid";
 

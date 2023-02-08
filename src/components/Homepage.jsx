@@ -17,6 +17,7 @@ import { DownloadImage } from "./Images";
 import { VideoTutorial } from "./VideoTutorial";
 import { AudioTutorial } from "./AudioTutorial";
 import Contact from "./Contact";
+// import { Movies } from "./Movies";
 
 function SearchedData({ data, handleVideo, handleAudio }) {
   return (
@@ -113,7 +114,7 @@ export function Homepage({
             onClick={() => {
               setvideoCount(videoCount + 1);
               toast({
-                title: `Increase This Audio count, go on ${videoCount}  😁`,
+                title: `Increase This Videos count, go on ${videoCount}  😁`,
                 status: "success",
                 isClosable: true,
               });
@@ -174,18 +175,22 @@ export function Homepage({
               <Image
                 w={"40px"}
                 src="https://ssyoutube.com/img/platforms/windows.svg"
+                alt="window platform"
               />
               <Image
                 w={"40px"}
                 src="https://ssyoutube.com/img/platforms/apple.svg"
+                alt="apple platform"
               />
               <Image
                 w={"40px"}
                 src="https://ssyoutube.com/img/platforms/android.svg"
+                alt="android platform"
               />
               <Image
                 w={"40px"}
                 src="https://ssyoutube.com/img/platforms/linux.svg"
+                alt="linux platform"
               />
             </Flex>
             <Text pt={"30px"}>

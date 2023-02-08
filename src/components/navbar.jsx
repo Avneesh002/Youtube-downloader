@@ -1,5 +1,4 @@
 import { Stack, Text, useBreakpointValue, Image } from "@chakra-ui/react";
-import Typewriter from "typewriter-effect";
 import "./styles/Navbar.css";
 
 export function Navbar() {
@@ -9,33 +8,38 @@ export function Navbar() {
         pl={useBreakpointValue({ base: "0px", lg: "20px" })}
         direction={"row"}
         className={"navbar_body"}
+        h="60px"
       >
         <Image
           bg={" rgb(49, 113, 153)"}
           position={"relative"}
           transform={"rotate(-10deg)"}
-          left="2px"
+          left="5px"
+          top="5px"
           borderRadius={"15px"}
           boxShadow={"1px 2px 9px 5px "}
-          w={useBreakpointValue({ base: "70px", lg: "90px" })}
+          w={useBreakpointValue({ base: "40px", lg: "50px" })}
+          h={useBreakpointValue({ base: "40px", lg: "50px" })}
           src="https://cliply.co/wp-content/uploads/2021/09/CLIPLY_142110380_ORGANIC_YT_ICON_400.gif"
+          alt="logo"
         />
         <Stack
-          w={useBreakpointValue({ base: "500px", lg: "800px" })}
-          align={useBreakpointValue({ base: "center", lg: "end" })}
-          justify={useBreakpointValue({ base: "center", lg: "space-evenly" })}
+          w={"100%"}
+          align={useBreakpointValue({ base: "center", lg: "center" })}
+          justify={useBreakpointValue({ base: "center", lg: "center" })}
         >
           <Text
-            fontSize={useBreakpointValue({ base: "19px", lg: "35px" })}
+            fontSize={useBreakpointValue({
+              base: "19px",
+              sm: "25px",
+              lg: "35px",
+            })}
             className="neonText"
+            overflow={"hidden"}
+            whiteSpace="nowrap"
+            textOverflow={"clip"}
           >
-            <Typewriter
-              options={{
-                strings: ["Youtube V!deo Downloader 📽️"],
-                autoStart: true,
-                loop: true,
-              }}
-            />
+            Youtube V!deo Downloader 📽️
           </Text>
         </Stack>
       </Stack>

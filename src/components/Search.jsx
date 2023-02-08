@@ -3,24 +3,14 @@ import {
   Flex,
   Input,
   Stack,
+  Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { SearchIcon } from "@chakra-ui/icons";
 import getYouTubeID from "get-youtube-id";
 
-let vals = JSON.parse(localStorage.getItem("val"));
-
-const Search = ({
-  videos,
-  setVideos,
-  data,
-  setData,
-  loader,
-  setLoader,
-  setState,
-  state,
-}) => {
+const Search = ({ setVideos, setData, setLoader, setState }) => {
   const [id, setId] = useState("");
   const [url, setUrl] = useState("");
   const [click, setClick] = useState(false);
@@ -77,6 +67,10 @@ const Search = ({
             onClick={() => handleBtn(options, id)}
             bg={"rgb(49, 113, 153)"}
           >
+            {" "}
+            <Text pr={"5px"} color={"white"}>
+              Search
+            </Text>
             <SearchIcon color={"white"} fontWeight="500" />
           </Button>
         </Flex>

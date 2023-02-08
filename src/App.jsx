@@ -1,4 +1,3 @@
-// import "./App.css";
 import { Navbar } from "./components/navbar";
 import { Homepage } from "./components/Homepage";
 import Footer from "./components/Footer";

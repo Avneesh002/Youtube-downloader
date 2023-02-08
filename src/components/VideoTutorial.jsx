@@ -1,10 +1,4 @@
-import {
-  Button,
-  Image,
-  Stack,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Button, Image, Stack, Text } from "@chakra-ui/react";
 
 export function VideoTutorial() {
   return (
@@ -16,7 +10,7 @@ export function VideoTutorial() {
       <Text pb={"10px"} align={"center"} fontWeight={"500"}>
         🔵 Click on download button
       </Text>
-      <Image src="/videoDownload.png" />
+      <Image loading="lazy" src="/videoDownload.WebP" alt="download video" />
     </Stack>
   );
 }
