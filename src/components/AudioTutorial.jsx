@@ -10,7 +10,7 @@ export function AudioTutorial() {
       <Text pb={"10px"} align={"center"} fontWeight={"500"}>
         🔵 Click on 3 dots button
       </Text>
-      <Image loading="lazy" src="./audio3Dots.WebP" alt="Click on 3 dots" />
+      {/* <Image loading="lazy" src="./audio3Dots.WebP" alt="Click on 3 dots" /> */}
       <Text pb={"10px"} align={"center"} fontWeight={"500"}>
         🔵 Click on download button
       </Text>

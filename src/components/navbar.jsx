@@ -34,12 +34,9 @@ export function Navbar() {
               sm: "25px",
               lg: "35px",
             })}
-            className="neonText"
-            overflow={"hidden"}
-            whiteSpace="nowrap"
-            textOverflow={"clip"}
+            className="title"
           >
-            Youtube V!deo Downloader 📽️
+            <a href="#">Youtube Video Downloader</a>
           </Text>
         </Stack>
       </Stack>
