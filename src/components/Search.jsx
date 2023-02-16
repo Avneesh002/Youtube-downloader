@@ -10,7 +10,7 @@ import React, { useEffect, useState } from "react";
 import { SearchIcon } from "@chakra-ui/icons";
 import getYouTubeID from "get-youtube-id";
 
-const Search = ({ setVideos, setData, setLoader, setState }) => {
+const Search = ({ setVideos, setData, setLoader, setState, loader }) => {
   const [id, setId] = useState("");
   const [url, setUrl] = useState("");
   const [click, setClick] = useState(false);
@@ -32,24 +32,22 @@ const Search = ({ setVideos, setData, setLoader, setState }) => {
       "X-RapidAPI-Host": "youtube-video-download-info.p.rapidapi.com",
     },
   };
-
   const handleBtn = (options, id) => {
     setState(true);
     setLoader(true);
+
     fetch(
       `https://youtube-video-download-info.p.rapidapi.com/dl?id=${id}`,
       options
     )
       .then((response) => response.json())
       .then((response) => {
-        localStorage.setItem("val", JSON.stringify(response));
         setData(response);
         setVideos(response.link);
+        setLoader(false);
       });
-
-    setLoader(false);
   };
-  // console.log(vals);
+
   return (
     <>
       <Stack m={"auto"} w={useBreakpointValue({ lg: "80%" })} pb={"50px"}>

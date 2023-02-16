@@ -96,7 +96,7 @@ export function Homepage({
         </Stack>
         {state ? (
           <Stack className="searched_data">
-            {(loader && data == []) || data == null || data == undefined ? (
+            {loader || data == [] ? (
               <Loader />
             ) : (
               <SearchedData

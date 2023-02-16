@@ -26,9 +26,9 @@
 .title {
   text-shadow: 0 0 7px #e2e2e4, 0 0 10px #fff, 0 0 21px #fff,
     0 0 42px rgb(133, 137, 140), 0 0 182px rgb(214, 214, 221),
-    0 0 92px rgb(230, 97, 15), 0 0 200px rgb(230, 97, 15),
-    0 0 91px rgb(230, 97, 15);
+    0 0 92px rgb(239, 239, 239), 0 0 200px rgb(255, 251, 249),
+    0 0 91px rgb(231, 231, 231);
   transition: 3s ease-in-out;
-  color: rgb(227, 225, 225);
+  color: rgb(255, 255, 255);
   font-weight: 500;
 }
