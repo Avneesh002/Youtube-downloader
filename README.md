@@ -1,7 +1,8 @@
-#Youtube Video Downloader
-<a href="https://downloadyoutube.vercel.app/">Click here</a>
+<h1>Youtube Video Downloader</h1>
+<h5>Youtube downloader is a website which allows you to download youtube videos in video and audio format.</h5>
+<a target="_blank" href="https://downloadyoutube.vercel.app/">Click here</a>
 
-#Tech Stack
+<h1>Tech Stack</h1>
 
 - React JS
 - HTML
@@ -9,5 +10,5 @@
 - Chakra-UI
 - NPM packages...
 
-<h2>Fully Responsive Website</h2>
-<h2>Audio and Videos, both are downloadable</h2>
+<h4>Fully Responsive Website</h4>
+<h4>Audio and Videos, both are downloadable</h4>
