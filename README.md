@@ -1,6 +1,6 @@
 <h1>Youtube Video Downloader</h1>
 <h5>Youtube downloader is a website which allows you to download youtube videos in video and audio format.</h5>
-<a target="_blank" href="https://downloadyoutube.vercel.app/">Click here</a>
+<a target="_blank" href="https://ytdownloader.tech/">Click here</a>
 
 <h1>Tech Stack</h1>
 
